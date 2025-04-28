@@ -1,0 +1,15 @@
+Note:
+Use CMD not Powershell or else curl command won't work.
+The outputs are given at the end of the code.
+
+curl command:
+curl https://raw.githubusercontent.com/Glavin92/AI/filename
+
+replace filename with the following:
+EXP2: vacuum.py
+EXP3: family_tree.pl
+EXP4: bfs_dfs.py
+EXP5: astar.py
+EXP6: tic_tac_toe.py
+EXP7: bbn.py
+EXP8: pop.py
