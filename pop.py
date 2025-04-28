@@ -41,21 +41,18 @@ class STRIPSPlanner:
         print("Final Plan (after threat resolution):", self.plan)
 
 
-# Example usage for Block World Problem
-# Sample Input:
 # Initial state: On(C, A), Clear(C), Clear(Table), On(B, Table), Clear(B)
 # Goal state: On(C, Table), Clear(A), On(B, C)
 
 init_state = set(input("Enter initial state: ").replace(" ", "").replace("):", ")").split(','))
 goal_state = set(input("Enter goal state: ").replace(" ", "").replace("):", ")").split(','))
 
-# Defining operators (actions) available for the planner
 operators = [
     {
-        'name': 'Move(C, A, Table)',  # Operator name
-        'preconditions': {'On(C, A)', 'Clear(C)', 'Clear(Table)'},  # Preconditions
-        'add_effects': {'On(C, Table)', 'Clear(A)'},  # Add effects
-        'del_effects': {'On(C, A)'}  # Delete effects
+        'name': 'Move(C, A, Table)',
+        'preconditions': {'On(C, A)', 'Clear(C)', 'Clear(Table)'},
+        'add_effects': {'On(C, Table)', 'Clear(A)'},
+        'del_effects': {'On(C, A)'}
     },
     {
         'name': 'Move(B, Table, C)',
@@ -71,8 +68,6 @@ operators = [
     }
 ]
 
-# Create a planner object with the initial state, goal state, and operators
 planner = STRIPSPlanner(init_state, goal_state, operators)
 
-# Start planning process
 planner.plan_steps()
