@@ -32,7 +32,6 @@ def a_star_search(initial, goal):
     open_list.append(root)
     
     while open_list:
-        # Get node with lowest cost (manually)
         current = min(open_list, key=lambda node: node.cost)
         open_list.remove(current)
 
@@ -78,7 +77,6 @@ def read_state(prompt):
     print(prompt)
     return [list(map(int, input(f"Enter row {i+1} : ").split())) for i in range(3)]
 
-# Driver
 if __name__ == "__main__":
     initial = read_state("Enter Initial State:")
     goal = read_state("Enter Goal State:")

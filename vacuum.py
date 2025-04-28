@@ -1,25 +1,25 @@
 class VacuumCleaner:
     def __init__(self):
-        self.location = "A"  # Initial location of vacuum cleaner
-        self.status = {"A": "CLEAN", "B": "CLEAN"}  # Initial status of both rooms
-        self.cost = 0  # Initial cost
+        self.location = "A" 
+        self.status = {"A": "CLEAN", "B": "CLEAN"}  
+        self.cost = 0  
 
     def get_percept(self):
-        return self.location, self.status[self.location]  # Returns current location and status
+        return self.location, self.status[self.location] 
 
     def suck(self):
-        self.status[self.location] = "CLEAN"  # Cleans the current location
-        self.cost += 1  # Sucking dirt adds to cost
+        self.status[self.location] = "CLEAN"  
+        self.cost += 1  
         print(f"Sucked dirt at location {self.location}")
 
     def move_left(self):
         if self.location == "B":
-            self.location = "A"  # Move from B to A
+            self.location = "A"  
             print("Moved to location A")
 
     def move_right(self):
         if self.location == "A":
-            self.location = "B"  # Move from A to B
+            self.location = "B"  
             print("Moved to location B")
 
     def start(self):
