@@ -3,7 +3,7 @@ Use CMD not Powershell or else curl command won't work.
 The outputs are given at the end of the code.
 
 curl command:
-curl https://raw.githubusercontent.com/Glavin92/AI/filename
+curl https://raw.githubusercontent.com/Glavin92/AI/main/filename
 
 replace filename with the following:
 EXP2: vacuum.py
